@@ -1,0 +1,16 @@
+{
+  "config": {
+    "environments": [
+      {
+        "dev": {
+          "phases": [
+            {
+              "duration": 10,
+              "arrivalRate": 1
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "aggregate": {
+    "timestamp": "2021-11-06T17:33:01.768Z",
+    "scenariosCreated": 50,
+    "scenariosCompleted": 48,
+    "requestsCompleted": 48,
+    "latency": {
+      "min": 172,
+      "max": 309,
+      "median": 191,
+      "p95": 266.7,
+      "p99": 309
+    },
+    "rps": {
+      "count": 50,
+      "mean": 1.01
+    },
+    "scenarioDuration": {
+      "min": 255.2,
+      "max": 512.8,
+      "median": 317.4,
+      "p95": 471.6,
+      "p99": 512.8
+    },
+    "scenarioCounts": {
+      "Get Category by ID": 22,
+      "Get Product by Category ID": 16,
+      "Get Product by ID": 12
+    },
+    "errors": {
+      "ECONNRESET": 2
+    },
+    "codes": {
+      "200": 48
+    },
+    "matches": 0,
+    "customStats": {},
+    "counters": {},
+    "scenariosAvoided": 0,
+    "phases": [
+      {
+        "duration": 50,
+        "arrivalRate": 1,
+        "rumpTo": 5
+      }
+    ]
+  },
+  "intermediate": [
+    {
+      "timestamp": "2021-11-06T17:32:21.187Z",
+      "scenariosCreated": 9,
+      "scenariosCompleted": 9,
+      "requestsCompleted": 9,
+      "latency": {
+        "min": 185,
+        "max": 309,
+        "median": 233,
+        "p95": 309,
+        "p99": 309
+      },
+      "rps": {
+        "count": 9,
+        "mean": 1
+      },
+      "scenarioDuration": {
+        "min": 313.5,
+        "max": 458,
+        "median": 392.5,
+        "p95": 458,
+        "p99": 458
+      },
+      "scenarioCounts": {
+        "Get Category by ID": 5,
+        "Get Product by Category ID": 4
+      },
+      "errors": {},
+      "codes": {
+        "200": 9
+      },
+      "matches": 0,
+      "latencies": [
+        291000000,
+        228000000,
+        185000000,
+        213000000,
+        233000000,
+        249000000,
+        219000000,
+        264000000,
+        309000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-11-06T17:32:31.195Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 9,
+      "requestsCompleted": 9,
+      "latency": {
+        "min": 172,
+        "max": 240,
+        "median": 195,
+        "p95": 240,
+        "p99": 240
+      },
+      "rps": {
+        "count": 10,
+        "mean": 1
+      },
+      "scenarioDuration": {
+        "min": 255.2,
+        "max": 468.8,
+        "median": 312.2,
+        "p95": 468.8,
+        "p99": 468.8
+      },
+      "scenarioCounts": {
+        "Get Product by Category ID": 3,
+        "Get Category by ID": 6,
+        "Get Product by ID": 1
+      },
+      "errors": {
+        "ECONNRESET": 1
+      },
+      "codes": {
+        "200": 9
+      },
+      "matches": 0,
+      "latencies": [
+        215000000,
+        240000000,
+        174000000,
+        195000000,
+        220000000,
+        172000000,
+        175000000,
+        180000000,
+        224000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 1,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-11-06T17:32:41.166Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 10,
+      "latency": {
+        "min": 172,
+        "max": 197,
+        "median": 181.5,
+        "p95": 197,
+        "p99": 197
+      },
+      "rps": {
+        "count": 10,
+        "mean": 1
+      },
+      "scenarioDuration": {
+        "min": 255.3,
+        "max": 377.1,
+        "median": 302.5,
+        "p95": 377.1,
+        "p99": 377.1
+      },
+      "scenarioCounts": {
+        "Get Product by ID": 4,
+        "Get Category by ID": 4,
+        "Get Product by Category ID": 2
+      },
+      "errors": {},
+      "codes": {
+        "200": 10
+      },
+      "matches": 0,
+      "latencies": [
+        177000000,
+        179000000,
+        181000000,
+        197000000,
+        181000000,
+        182000000,
+        185000000,
+        172000000,
+        190000000,
+        193000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 1,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-11-06T17:32:51.164Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 10,
+      "requestsCompleted": 10,
+      "latency": {
+        "min": 174,
+        "max": 212,
+        "median": 192,
+        "p95": 212,
+        "p99": 212
+      },
+      "rps": {
+        "count": 10,
+        "mean": 1
+      },
+      "scenarioDuration": {
+        "min": 256.9,
+        "max": 390.2,
+        "median": 307.7,
+        "p95": 390.2,
+        "p99": 390.2
+      },
+      "scenarioCounts": {
+        "Get Category by ID": 4,
+        "Get Product by ID": 5,
+        "Get Product by Category ID": 1
+      },
+      "errors": {},
+      "codes": {
+        "200": 10
+      },
+      "matches": 0,
+      "latencies": [
+        174000000,
+        176000000,
+        192000000,
+        211000000,
+        192000000,
+        177000000,
+        212000000,
+        183000000,
+        192000000,
+        199000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 1,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-11-06T17:33:01.199Z",
+      "scenariosCreated": 10,
+      "scenariosCompleted": 9,
+      "requestsCompleted": 9,
+      "latency": {
+        "min": 174,
+        "max": 203,
+        "median": 187,
+        "p95": 203,
+        "p99": 203
+      },
+      "rps": {
+        "count": 10,
+        "mean": 1
+      },
+      "scenarioDuration": {
+        "min": 267.1,
+        "max": 512.8,
+        "median": 381.8,
+        "p95": 512.8,
+        "p99": 512.8
+      },
+      "scenarioCounts": {
+        "Get Product by Category ID": 6,
+        "Get Category by ID": 3,
+        "Get Product by ID": 1
+      },
+      "errors": {
+        "ECONNRESET": 1
+      },
+      "codes": {
+        "200": 9
+      },
+      "matches": 0,
+      "latencies": [
+        174000000,
+        184000000,
+        179000000,
+        183000000,
+        187000000,
+        203000000,
+        194000000,
+        189000000,
+        196000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 2,
+      "scenariosAvoided": 0
+    },
+    {
+      "timestamp": "2021-11-06T17:33:01.731Z",
+      "scenariosCreated": 1,
+      "scenariosCompleted": 1,
+      "requestsCompleted": 1,
+      "latency": {
+        "min": 184,
+        "max": 184,
+        "median": 184,
+        "p95": 184,
+        "p99": 184
+      },
+      "rps": {
+        "count": 1,
+        "mean": 1.92
+      },
+      "scenarioDuration": {
+        "min": 283.5,
+        "max": 283.5,
+        "median": 283.5,
+        "p95": 283.5,
+        "p99": 283.5
+      },
+      "scenarioCounts": {
+        "Get Product by ID": 1
+      },
+      "errors": {},
+      "codes": {
+        "200": 1
+      },
+      "matches": 0,
+      "latencies": [
+        184000000
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 2,
+      "scenariosAvoided": 0
+    }
+  ]
+}

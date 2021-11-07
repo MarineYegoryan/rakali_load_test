@@ -1,0 +1,71 @@
+config:
+  plugins:
+    publish-metrics:
+      - type: datadog
+        # DD_API_KEY is an environment variable containing the API key
+        apiKey: d554fae9fdd71f4bfdca40d872eb6e19
+        #        apiKey: {{ $processEnvironment.DD_API_KEY }}
+        prefix: 'artillery.publish_metrics_plugin.'
+        tags:
+          - "host:api.us-central1.gcp.commercetools.com"
+          - "reporterType:datadog-api"
+          - "test:ct_load_test"
+  payload:
+    # path is relative to the location of the test script
+    path: "product_list.csv"
+    fields:
+      - "categoryId"
+      - "productId"
+    order: random
+    skipHeader: true
+  environments:
+    dev:
+      target: "https://api.us-central1.gcp.commercetools.com/master-project"
+      phases:
+        - duration: 50
+          arrivalRate: 1
+          rumpTo: 5
+    qa:
+      target: "https://api.us-central1.gcp.commercetools.com/master-project"
+      phases:
+        - duration: 1500
+          arrivalRate: 1
+          rumpTo: 500
+  config:
+    ensure:
+      maxErrorRate: 1
+before:
+  flow:
+    - log: "Get auth token"
+    - post:
+        url: "https://auth.us-central1.gcp.commercetools.com/oauth/token?grant_type=client_credentials"
+        headers:
+          authorization: "Basic VXZIaDlYYV9BZHo4WEo5U0xnbzJoRjNwOnd6QUQ3T2lyWVE4ekQ1OU45RlBHenE3Y1B0UUJqeVQw"
+        capture:
+          - json: $.access_token
+            as: token
+scenarios:
+  - name: "Get Product by Category ID"
+    flow:
+      - get:
+          url: "/products/?where=masterData(current(categories(id={{categoryId}})))"
+          encode: true
+          headers:
+            authorization: "Bearer {{ token }}"
+      - log: "Show message => GET /products/?where=masterData(current(categories(id={{categoryId}})))"
+  - name: "Get Product by ID"
+    flow:
+      - get:
+          url: "/products/{{ productId }}"
+          encode: true
+          headers:
+            authorization: "Bearer {{ token }}"
+      - log: "Show message => GET /products/{{ productId }}"
+  - name: "Get Category by ID"
+    flow:
+      - get:
+          url: "/categories/{{ categoryId }}"
+          encode: true
+          headers:
+            authorization: "Bearer {{ token }}"
+      - log: "Show message => GET /categories/{{ categoryId }}"
